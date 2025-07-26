@@ -36,7 +36,7 @@
 //  if(num == 1) {
 //     console.log("1 입니다.");
 //  } else if(num == 5) {
-//     console.loga("5 입니다.")
+//     console.log("5 입니다.")
 //  } else {
 //     console.log("1,5 둘다 아닙니다.")
 //  }
