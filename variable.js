@@ -1,40 +1,43 @@
-//변수 (variable)
+// 변수 (variable)
 // 키워드 변수명 = 값;
-//위와 같은 형식으로 선언
-//키워드의 경우 var, let, const 이렇게 3가지가 있음
+// 위와 같은 형식으로 선언
+// 키워드의 경우 var, let, const 이렇게 3가지가 있음
 // var     : 중복선언 가능, 재할당 가능
 // let     : 중복선언 불가능, 재할당 가능, 보통 값이 변하지 않는 경우 주로 사용
 // const   : 중복선언 불가능, 재할당 불가능, 보통 값이 변하지 않는 경우 주로 사용
 // JS 에서는 모든 코드 한줄 뒤에 새미콜론; 을 붙여야함
 
-//변수 이름 규칙: 숫자로 시작 불가 띄어쓰기 안됨 _를 제외한 특수문자 사용 불기능
+// 변수 이름 규칙: 숫자로 시작 불가 띄어쓰기 안됨 _를 제외한 특수문자 사용 불기능
 
-// var age= 13;      //재할당
-// let my_name='Ryan';
+// var age = 13;
+// let my_name = 'Ryan';
 // const height = 188;
 
 // age = 20;
 
-// var test;   //변수생성
-// test = cit;  //변수 값에 할당
+// var test;       // 변수만 생성
+// test = "cit";   // 변수 값을 나중에 저장
+
 
 // +++++++++++++++++++++++++++++++++++++++++++++++++ //
 
 
 // 자료형 (Data Types)
 // 자료형은 값의 종류
-// string    문자  => 따음표로 이루어져있음(" ", ' '), 따음표가 있으면 무조건 문자
-// number    숫자  =>따음표 X, 정수, 실수 다 포함
-// boolean   논리  =>true, false 딱 2개만 있음
-// undiefined      => 값이 저장이 안된 변수
-// null      널   => 값이 없는 것
+// string       문자    => 따음표로 이루어져있음(" ", ' '), 따음표가 있으면 무조건 문자
+// number       숫자    => 따음표 X, 정수, 실수 다 포함
+// boolean      논리    => true, false 딱 2개만 있음
+// undiefined           => 값이 저장이 안된 변수
+// null         널      => 값이 없는 것
 
-// var text = 'Hello World'; //string 자료형이 저장
-// var num = -3.14; //number 자료형의 저장
-// var is= true; //boolean 자료형이 저장
-// var n = null; //null이 저장
+// var text = "Hello World";   // string 자료형이 저장
+// var num = -3.14;            // number 자료형의 저장
+// var is= true;               // boolean 자료형이 저장
+// var n = null;               // null이 저장, 잘 사용 안함
+
 
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++ //
+
 
 //출력
 // console.log("Hello world"); //hello world 출력
@@ -45,18 +48,22 @@
 // var pi = 3.14;
 // console.log(pi)
 
-// console.log("hello", pi) // ,(콤마)를 사용하여 여러개를 출력
-
-// var pi = 3.14;
-// console.log(pi)
+// console.log("hello", pi)    // ,(콤마)를 사용하여 여러개를 출력
 
 
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++ //
 
+
 // 자료형 확인(data type) 확인
-// typeof (값);
+// typeof(값);
 // typeof 값
 // 위 두가지 형식 사용, typeof만 사용을 했을 경우 실행은 하지만 눈으로 자료형 확인이 불가능
+// console.log() 내부에 사용하여 자료형을 눈으로 확인
+
+// console.log(typeof(3.14));
+
+// var t = "Hello";
+// console.log(typeof t);
 
 
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ //
@@ -69,22 +76,23 @@
 // % 나머지
 // ** 제곱
 
-// var a= 10;
-// var b=3;
-// console.log(a +b );
+// var a = 10;
+// var b = 3;
+// console.log(a +b);
 // console.log(a - b);
 // console.log(a*b);
 // console.log(a / b);
 // console.log(a % b);
 // console.log(a ** b);
 
+
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++ //
 
 
 // 이스케이프 코드
 // 특별한 문자로 분자 출력시에 상용한다 => 따옴표 기호(" ", ' ')
-// \n 문자열에서 중을 바꿀때 사용
-// \t 문자열 사이에 탭 간격을 줄일때 사용
+// \n 문자열에서 줄을 바꿀때 사용
+// \t 문자열 사이에 탭 간격을 넣을 때 사용
 // \\ 문자를 \를 그대로 표현할 때 사용
 // \'  '를 출력
 // \"  "를 출력
@@ -106,15 +114,21 @@
 
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ //
 
+
 // Arrays 
-// 하나의 변수에 여러개의 값을 저장 가능, 다양한 자료형을 섞어서 저장이 가능ㅎ하지만 보통의 경우 한개의 자료형으로 통일
-// []기호를 사용하며, 순서의 경우 인덱스(index)라고 말하며 0으로 시작
+// 하나의 변수에 여러개의 값을 저장 가능, 다양한 자료형을 섞어서 저장이 가능하지만 보통의 경우 한개의 자료형으로 통일
+// []기호를 사용하며, 순서의 경우 인덱스(index)라고 말하며 0부터 시작
 // 값을 구분할때는 ,를 사용하며, 길이, 크기는 몇개가 저장되어 있는지 말함
+// 값을 참초 할떄는
+// 변수[인덱스 번호]
+// 위 형식으로 참조
 
-var arr = [1, 1, "Hello", false]
-console.log (arr[2]);
+// var arr = [1, 2, "Hello", false]    // arr의 길이는 4, 마지막 값인 false의 index는 3, 무조건 마지막 index 번호는 길이-1
+// console.log(arr);
+// console.log(arr[2]);                // arr에서 []안의 첫번째는 0부터 시작한다.
 
-var test= ["Kim", "Park", "Jeong", "Yang"]
-for(let i=0; i < test.length; i++) {
-    console.log(test[i])
-}
+
+// var test= ["Kim", "Park", "Jeong", "Yang"]
+// for(let i=0; i < test.length; i++) {
+//     console.log(test[i])
+// }
